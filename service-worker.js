@@ -1,13 +1,13 @@
 
-self.addEventListener('install', event => {
-  console.log('📦 Service worker installerad');
+self.addEventListener('install', (event) => {
+  console.log('Service Worker: Installerar...');
   self.skipWaiting();
 });
 
-self.addEventListener('activate', event => {
-  console.log('🚀 Service worker aktiv');
+self.addEventListener('activate', (event) => {
+  console.log('Service Worker: Aktivt nu');
 });
 
-self.addEventListener('fetch', event => {
-  // Lägg till caching här om du vill senare
+self.addEventListener('fetch', function(event) {
+  event.respondWith(fetch(event.request));
 });
