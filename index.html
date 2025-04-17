@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -6,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ordresan</title>
   <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon-192.png" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
@@ -51,9 +51,10 @@
     <h1 style="font-size: 2rem; font-weight: bold;">Ordresan</h1>
     <div id="app">Appens funktioner kommer här</div>
   </div>
+
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
+      navigator.serviceWorker.register('sw.js')
         .then(() => console.log('✔ Service worker registrerad'))
         .catch(error => console.log('Service worker misslyckades:', error));
     }
